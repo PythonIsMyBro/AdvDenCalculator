@@ -1,0 +1,83 @@
+from time import sleep
+
+print('Welcome to AdvDenCalc! Please go ahead and use the calculator!')
+sleep(0.75)
+y = int(input('Enter 1 for add, 2 for subtract, 3 for times, 4 for divide, 5 for adv:  '))
+
+if y != 5:
+    c = int(0)
+
+if y != 4:
+    i = int(0)
+
+if y == 4:
+    sleep(0.25)
+    i = int(input('1 is for normal division, 2 for floor division: '))
+    sleep(0.25)
+
+if y == 5:
+    sleep(0.25)
+    c = int(input('1 for power: '))
+    sleep(0.25)
+
+a = float(input('Enter the first number: '))
+if y == 1:
+    print('+')
+if y == 2:
+    print('-')
+if y == 3:
+    print('*')
+if i == 1:
+    print('/')
+if i == 2:
+    print('(Floor)/')
+if c == 1:
+    print('**')
+b = float(input('Enter the second number: '))
+
+sleep(0.5)
+
+print('=')
+
+
+
+if y == 1:
+    answer = float(a)+float(b)
+
+if y == 2:
+    answer = float(a)-float(b)
+
+if y == 3:
+    answer = float(a)*float(b)
+
+
+
+if i == 1:
+    answer = float(a)/float(b)
+
+if i == 2:
+    answer = float(a)//float(b)
+
+
+if c:
+    answer = float(a)**float(b)
+
+
+if y == 1:
+    print(a,'add',b,'is',answer)
+
+if y == 2:
+    print(a,'subtract',b,'is',answer)
+
+if y == 3:
+    print(a,'times',b,'is',answer)
+
+
+if c == 1:
+    print(a,'to the power of',b,'is',answer)
+
+if i == 1:
+    print(a,'divided by',b,'is',answer)
+
+if i == 2:
+    print(a,'(Floored) divided by',b,'is',answer)
